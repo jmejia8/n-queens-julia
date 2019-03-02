@@ -12,7 +12,7 @@ function plot_chessboard(x=zeros(8))
 
     chessboard = repeat([1 0; 0 1], outer=(n2,n2))
 
-    p = heatmap(chessboard, xlim=[0.5, n+0.5], ylim=[0.5, n+0.5], title="Ataques: $(queen_atacks(x))")
+    p = heatmap(chessboard, xlim=[0.5, n+0.5], ylim=[0.5, n+0.5], title="Ataques: $(queen_atacks(x[ x .!= 0 ]))")
 
     
     for i = 1:n
@@ -42,4 +42,4 @@ function main()
     println(g)
 end
 
-main()
+# main()
